@@ -23,8 +23,8 @@ $(call inherit-product, device/xiaomi/natrium/full_natrium.mk)
 # Inherit some common AICP stuff.
 $(call inherit-product, vendor/aicp/configs/common.mk)
 
-+# Inherit telephony stuff
- +$(call inherit-product, vendor/aicp/configs/telephony.mk)
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
 
 PRODUCT_NAME := aicp_natrium
 PRODUCT_DEVICE := natrium
