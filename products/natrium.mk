@@ -23,8 +23,8 @@ $(call inherit-product, device/xiaomi/natrium/full_natrium.mk)
 # Inherit some common AICP stuff.
 $(call inherit-product, vendor/aicp/configs/common.mk)
 
-+# Inherit telephony stuff
- +$(call inherit-product, vendor/aicp/configs/telephony.mk)
+# Inherit telephony stuff
+$(call inherit-product, vendor/aicp/configs/telephony.mk)
 
 PRODUCT_NAME := aicp_natrium
 PRODUCT_DEVICE := natrium
@@ -41,3 +41,12 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="natrium-user 6.0.1 MXB48T V8.2.2.0.MBGMIDL release-keys"
 
 TARGET_VENDOR := xiaomi
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="Jan Pawel Drugi  (JP2GMD@Pieklo)" \
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
+-include vendor/aicp/configs/bootanimation.mk
